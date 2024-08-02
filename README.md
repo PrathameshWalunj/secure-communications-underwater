@@ -1,74 +1,59 @@
-# secure-communications-underwater
-This Project explores encryption, key exchange, authentication &amp; integrity techniques for secure underwater acoustic communication. It models the channel, evaluates security mechanisms via simulations, penetration testing &amp; integrates with cybersecurity tools, contributing novel approaches
-# SecureComms
-
-SecureComms explores encryption, key exchange, authentication & integrity techniques tailored for secure underwater acoustic communication. It models the underwater channel, evaluates security mechanisms through simulations, penetration testing & integrates with cybersecurity tools, contributing novel approaches to secure underwater communications.
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Security Analysis](#security-analysis)
-- [Integration](#integration)
-- [Contributing](#contributing)
-- [License](#license)
+# Secure Underwater Communications
 
 ## Project Overview
-
-SecureComms is a project focused on developing and evaluating robust encryption and security mechanisms specifically designed for underwater acoustic communication systems. It addresses the unique challenges of secure data transmission in underwater environments, mitigating potential cyber threats such as eavesdropping, data tampering, and denial-of-service attacks.
-
-The project explores various encryption algorithms, key exchange protocols, authentication methods, and integrity protection techniques optimized for the constraints of underwater channels. Through simulations and modeling of the underwater acoustic channel, taking into account factors like multipath propagation, Doppler spread, and ambient noise, the project evaluates the performance, resilience, and robustness of the implemented security mechanisms.
+This project implements a secure communication system designed for submarine operations. It addresses critical vulnerabilities in existing underwater communication systems by implementing advanced cryptographic techniques, covert channels, and quantum-resistant algorithms. The system aims to provide undetectable, highly secure data transmission in challenging underwater environments.
 
 ## Features
 
-- Encryption algorithms tailored for underwater acoustic communication
-- Secure key exchange protocols
-- Authentication and integrity protection mechanisms
-- Underwater acoustic channel modeling and simulation
-- Comprehensive security analyses and vulnerability assessments
-- Penetration testing and evaluation of security mechanisms
-- Integration with existing cybersecurity frameworks and tools
+### Quantum-Resistant Encryption
+- Implementation of post-quantum cryptographic algorithms
+- Future-proofing against potential quantum computing threats
 
-## Technologies Used
+### Covert Channel Communication
+- Techniques to hide communication within ambient ocean noise
+- Steganographic methods for data concealment
 
-- C++ (or other programming languages/libraries as needed)
-- Underwater acoustic channel simulation libraries
-- Cryptography libraries (e.g., OpenSSL, NaCl)
-- Penetration testing tools (e.g., Metasploit, Nmap)
-- Cybersecurity frameworks and protocols (e.g., TLS, IPSec)
+### Fractured Transmission Protocol
+- Message splitting into encrypted fragments
+- Randomized transmission of fragments to enhance security
+
+### Adaptive Frequency Hopping
+- Dynamic frequency selection based on environmental conditions
+- Evasion techniques against jamming attempts
+
+### Zero-Knowledge Authentication
+- Advanced authentication mechanisms
+- Identity verification without revealing sensitive information
 
 ## Installation
+To set up this project, follow these steps:
 
-In Progress
+1. Clone the repository:
+git clone https://github.com/PrathameshWalunj/secure-communications-underwater.git
 
-## Usage
+    cd secure-communications-underwater
+  
+2. Ensure you have the following prerequisites:
+- C++20 compatible compiler
+- CMake 3.12 or higher
+- OpenSSL library
+- Python 3.9+ (for simulations)
+3. Build the project:
 
-In Progress
+    mkdir build && cd build
 
-## Security Analysis
+    cmake ..
 
-SecureComms includes extensive security analyses, vulnerability assessments, and penetration testing to identify potential weaknesses and validate the effectiveness of the implemented security measures against different attack vectors. The project includes:
+    make
 
-- Vulnerability scanning reports
-- Penetration testing methodologies and results
-- Cryptanalysis and security evaluations
-- Mitigation strategies and countermeasures
+4. Run tests:
 
-## Integration
-
-The project investigates the integration of the secure underwater communication solution with existing cybersecurity frameworks, protocols, and tools, enabling seamless integration into larger cybersecurity architectures. Integration examples and demonstrations are provided for:
-
-- Secure communication protocols (e.g., TLS, IPSec)
-- Intrusion detection systems
-- Security information and event management (SIEM) solutions
-
-## Contributing
-
-In Future...
+    make test
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-MIT License
+## Disclaimer
+This project is for research and educational purposes only. Ensure compliance with all applicable laws and regulations regarding cryptography and military communications.
+
+     
