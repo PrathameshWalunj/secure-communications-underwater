@@ -1,0 +1,5 @@
+/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles/SecureUnderwaterComm.dir
+/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles/RunTests.dir
+/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles/test.dir
+/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles/edit_cache.dir
+/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles/rebuild_cache.dir
