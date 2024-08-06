@@ -233,6 +233,33 @@ src/MessageComposer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/MessageComposer.cpp.s
 .PHONY : src/MessageComposer.cpp.s
 
+src/Submarine.o: src/Submarine.cpp.o
+.PHONY : src/Submarine.o
+
+# target to build an object file
+src/Submarine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/Submarine.cpp.o
+.PHONY : src/Submarine.cpp.o
+
+src/Submarine.i: src/Submarine.cpp.i
+.PHONY : src/Submarine.i
+
+# target to preprocess a source file
+src/Submarine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/Submarine.cpp.i
+.PHONY : src/Submarine.cpp.i
+
+src/Submarine.s: src/Submarine.cpp.s
+.PHONY : src/Submarine.s
+
+# target to generate assembly for a file
+src/Submarine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/Submarine.cpp.s
+.PHONY : src/Submarine.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -301,6 +328,9 @@ help:
 	@echo "... src/MessageComposer.o"
 	@echo "... src/MessageComposer.i"
 	@echo "... src/MessageComposer.s"
+	@echo "... src/Submarine.o"
+	@echo "... src/Submarine.i"
+	@echo "... src/Submarine.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

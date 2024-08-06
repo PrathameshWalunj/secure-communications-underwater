@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SecureUnderwaterComm.dir/src/FracturedMessage.cpp.o.d"
   "CMakeFiles/SecureUnderwaterComm.dir/src/MessageComposer.cpp.o"
   "CMakeFiles/SecureUnderwaterComm.dir/src/MessageComposer.cpp.o.d"
+  "CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.o"
+  "CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.o.d"
   "CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o"
   "CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o.d"
   "SecureUnderwaterComm"

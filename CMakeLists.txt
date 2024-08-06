@@ -16,6 +16,7 @@ set(SOURCES
     src/MessageComposer.cpp
     src/FracturedMessage.cpp
     src/CommunicationChannel.cpp
+    src/Submarine.cpp
 )
 
 # Create the main executable

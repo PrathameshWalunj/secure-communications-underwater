@@ -1,91 +1,58 @@
-#include "MessageComposer.h"
-#include "FracturedMessage.h"
-#include "CommunicationChannel.h"
-#include <iostream>
-#include <stdexcept>
-#include <map>
 
-using namespace std;
+#include "Submarine.h"
+#include <iostream>
+#include <string>
+#include <vector>
+
+void printHelp() {
+    std::cout << "Available commands:\n"
+              << "  send <recipient> <subject> <message> - Send a message\n"
+              << "  receive - Simulate receiving a message\n"
+              << "  help - Show this help message\n"
+              << "  exit - Exit the program\n";
+}
 
 int main() {
-    try {
-        cout << "Secure Underwater Communication System" << endl;
+    CommunicationChannel channel(0.01, 0.05, 10, 100);
+    Submarine submarine("Alpha", &channel);
 
-        MessageComposer composer;
-        FracturedMessage fractured;
-        CommunicationChannel channel(0.01, 0.05, 10, 100);
+    std::cout << "Secure Underwater Communication System\n";
+    std::cout << "Type 'help' for available commands.\n";
 
-        string message = composer.composeMessage("Submarine Alpha", "Test", "This is a test message.");
-        cout << "Composed message: " << message << endl;
+    std::string command;
+    std::vector<std::tuple<int, std::string, uint32_t>> lastSentFragments;
 
-        string encrypted = composer.encryptMessage(message);
-        cout << "Encrypted message: " << encrypted << endl;
+    while (true) {
+        std::cout << "> ";
+        std::cin >> command;
 
-        fractured.fracture(encrypted, 5);
-        cout << "Fractured into " << fractured.getFragments().size() << " parts." << endl;
-
-        map<int, pair<string, uint32_t>> receivedFragments;
-        const int maxAttempts = 3;
-
-        for (int attempt = 1; attempt <= maxAttempts; ++attempt) {
-            cout << "Transmission attempt " << attempt << ":" << endl;
-
-            for (const auto& fragment : fractured.getFragments()) {
-                int index = get<0>(fragment);
-                if (receivedFragments.find(index) == receivedFragments.end()) {
-                    string transmittedFragment = channel.transmit(get<1>(fragment));
-                    if (!transmittedFragment.empty()) {
-                        receivedFragments[index] = make_pair(transmittedFragment, get<2>(fragment));
-                        cout << "  Fragment " << index << " received." << endl;
-                    } else {
-                        cout << "  Fragment " << index << " lost." << endl;
-                    }
-                }
+        if (command == "send") {
+            std::string recipient, subject, message;
+            std::cin >> recipient >> subject;
+            std::cin.ignore();
+            std::getline(std::cin, message);
+            submarine.sendMessage(recipient, subject, message);
+            lastSentFragments = submarine.getLastSentFragments();
+        } else if (command == "receive") {
+            // Use the last sent fragments for simulation
+            if (lastSentFragments.empty()) {
+                std::cout << "No message has been sent yet. Please send a message first." << std::endl;
+                continue;
             }
 
-            if (receivedFragments.size() == fractured.getFragments().size()) {
-                break;
+            try {
+                std::string decryptedMessage = submarine.receiveMessage(lastSentFragments);
+                std::cout << "Received message: " << decryptedMessage << std::endl;
+            } catch (const std::exception& e) {
+                std::cout << "Error receiving message: " << e.what() << std::endl;
             }
-
-            cout << "Received " << receivedFragments.size() << " out of " << fractured.getFragments().size() << " fragments." << endl;
-
-            if (attempt < maxAttempts) {
-                cout << "Attempting retransmission of lost fragments..." << endl;
-            }
-        }
-
-        if (receivedFragments.size() == fractured.getFragments().size()) {
-            FracturedMessage receivedFractured;
-            bool allFragmentsValid = true;
-            for (const auto& fragment : receivedFragments) {
-                if (receivedFractured.verifyFragment(fragment.first, fragment.second.first, fragment.second.second)) {
-                    receivedFractured.addFragment(fragment.first, fragment.second.first, fragment.second.second);
-                } else {
-                    cout << "Fragment " << fragment.first << " failed checksum verification." << endl;
-                    allFragmentsValid = false;
-                }
-            }
-
-            if (allFragmentsValid) {
-                string reassembled = receivedFractured.reassemble();
-                cout << "Reassembled message: " << reassembled << endl;
-
-                try {
-                    string decrypted = composer.decryptMessage(reassembled);
-                    cout << "Decrypted message: " << decrypted << endl;
-                } catch (const exception& e) {
-                    cerr << "Failed to decrypt message: " << e.what() << endl;
-                }
-            } else {
-                cout << "Failed to reassemble message: Some fragments were corrupted during transmission." << endl;
-            }
+        } else if (command == "help") {
+            printHelp();
+        } else if (command == "exit") {
+            break;
         } else {
-            cout << "Failed to reassemble message: Some fragments were lost during transmission after " << maxAttempts << " attempts." << endl;
+            std::cout << "Unknown command. Type 'help' for available commands.\n";
         }
-
-    } catch (const exception& e) {
-        cerr << "An error occurred: " << e.what() << endl;
-        return 1;
     }
 
     return 0;

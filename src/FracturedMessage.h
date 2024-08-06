@@ -6,23 +6,22 @@
 #include <random>
 #include <cstdint>
 
-using namespace std;
-
 class FracturedMessage {
 private:
-    vector<tuple<int, string, uint32_t>> fragments;
-    mt19937 rng;
+    std::vector<std::tuple<int, std::string, uint32_t>> fragments;
+    std::mt19937 rng;
 
-    static uint32_t calculateChecksum(const string& data);
+    static uint32_t calculateCRC32(const std::string& data);
 
 public:
     FracturedMessage();
-    void fracture(const string& message, size_t numFragments);
-    vector<tuple<int, string, uint32_t>>& getFragments();
-    string reassemble() const;
-    void addFragment(int index, const string& fragment, uint32_t checksum);
+    void fracture(const std::string& message, size_t numFragments);
+    std::vector<std::tuple<int, std::string, uint32_t>>& getFragments();
+    const std::vector<std::tuple<int, std::string, uint32_t>>& getFragments() const; // Add this line
+    std::string reassemble() const;
+    void addFragment(int index, const std::string& fragment, uint32_t crc);
     bool isComplete() const;
-    bool verifyFragment(int index, const string& fragment, uint32_t checksum) const;
+    bool verifyFragment(int index, const std::string& fragment, uint32_t crc) const;
 };
 
-#endif 
+#endif

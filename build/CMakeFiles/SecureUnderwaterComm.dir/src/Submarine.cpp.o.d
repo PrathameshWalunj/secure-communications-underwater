@@ -1,5 +1,5 @@
-CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o: \
-  /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/main.cpp \
+CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.o: \
+  /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/Submarine.cpp \
   /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/Submarine.h \
   /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/MessageComposer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/string \
