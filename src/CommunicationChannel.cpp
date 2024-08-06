@@ -1,6 +1,7 @@
 #include "CommunicationChannel.h"
 #include <thread>
 #include <algorithm>
+#include<iostream>
 
 using namespace std;
 
@@ -9,7 +10,10 @@ CommunicationChannel::CommunicationChannel(double noise, double packetLoss, int 
       noiseProbability(noise),
       packetLossProbability(packetLoss),
       minLatency(minLat),
-      maxLatency(maxLat) {}
+      maxLatency(maxLat),
+      currentFrequency(1500.0),
+      currentChannel(0){}
+
 
 string CommunicationChannel::introduceNoise(const string& message) {
     string noisyMessage = message;
@@ -34,15 +38,30 @@ int CommunicationChannel::getLatency() {
     return distr(rng);
 }
 
-string CommunicationChannel::transmit(const string& message) {
-    if (isPacketLost()) {
-        return "";  // Packet lost, return empty string
+std::string CommunicationChannel::transmit(const std::string& message) {
+    try {
+        std::vector<double> noiseLevels = pythonIntegration.simulateNoise();
+        currentFrequency = pythonIntegration.getNextFrequency(noiseLevels);
+        currentChannel = static_cast<int>((currentFrequency - 1000.0) / 100.0);  // Assuming 10 channels between 1000 and 2000 Hz
+
+        bool packetLost = isPacketLost();
+        if (packetLost) {
+            std::cout << "Packet lost at frequency " << currentFrequency << " Hz (channel " << currentChannel << ")" << std::endl;
+            pythonIntegration.updateChannelPerformance(currentChannel, false);
+            return "" ; // Packet lost, return empty string
+        }
+
+        std::string transmittedMessage = introduceNoise(message);
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(getLatency()));
+
+        std::cout << "Message transmitted successfully at frequency " << currentFrequency << " Hz (channel " << currentChannel << ")" << std::endl;
+        pythonIntegration.updateChannelPerformance(currentChannel, true);
+
+        return transmittedMessage;
+    } catch (const std::exception& e) {
+        std::cerr << "Error during transmission: " << e.what() << std::endl;
+        return "";  // Return empty string to indicate transmission failure
     }
-    
-    string transmittedMessage = introduceNoise(message);
-    
-    // Simulate latency (reduced for testing purposes)
-    this_thread::sleep_for(chrono::milliseconds(getLatency()));
-    
-    return transmittedMessage;
 }
+

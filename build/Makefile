@@ -233,6 +233,33 @@ src/MessageComposer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/MessageComposer.cpp.s
 .PHONY : src/MessageComposer.cpp.s
 
+src/PythonIntegration.o: src/PythonIntegration.cpp.o
+.PHONY : src/PythonIntegration.o
+
+# target to build an object file
+src/PythonIntegration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.o
+.PHONY : src/PythonIntegration.cpp.o
+
+src/PythonIntegration.i: src/PythonIntegration.cpp.i
+.PHONY : src/PythonIntegration.i
+
+# target to preprocess a source file
+src/PythonIntegration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.i
+.PHONY : src/PythonIntegration.cpp.i
+
+src/PythonIntegration.s: src/PythonIntegration.cpp.s
+.PHONY : src/PythonIntegration.s
+
+# target to generate assembly for a file
+src/PythonIntegration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.s
+.PHONY : src/PythonIntegration.cpp.s
+
 src/Submarine.o: src/Submarine.cpp.o
 .PHONY : src/Submarine.o
 
@@ -328,6 +355,9 @@ help:
 	@echo "... src/MessageComposer.o"
 	@echo "... src/MessageComposer.i"
 	@echo "... src/MessageComposer.s"
+	@echo "... src/PythonIntegration.o"
+	@echo "... src/PythonIntegration.i"
+	@echo "... src/PythonIntegration.s"
 	@echo "... src/Submarine.o"
 	@echo "... src/Submarine.i"
 	@echo "... src/Submarine.s"

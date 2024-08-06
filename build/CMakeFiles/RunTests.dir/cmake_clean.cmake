@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/RunTests.dir/src/FracturedMessage.cpp.o.d"
   "CMakeFiles/RunTests.dir/src/MessageComposer.cpp.o"
   "CMakeFiles/RunTests.dir/src/MessageComposer.cpp.o.d"
+  "CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.o"
+  "CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.o.d"
   "CMakeFiles/RunTests.dir/src/Submarine.cpp.o"
   "CMakeFiles/RunTests.dir/src/Submarine.cpp.o.d"
   "CMakeFiles/RunTests.dir/tests/test.cpp.o"
