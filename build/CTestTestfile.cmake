@@ -5,4 +5,4 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 add_test(RunTests "/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/RunTests")
-set_tests_properties(RunTests PROPERTIES  _BACKTRACE_TRIPLES "/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/CMakeLists.txt;58;add_test;/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/CMakeLists.txt;0;")
+set_tests_properties(RunTests PROPERTIES  _BACKTRACE_TRIPLES "/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/CMakeLists.txt;67;add_test;/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/CMakeLists.txt;0;")

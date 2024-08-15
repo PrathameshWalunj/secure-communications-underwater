@@ -3,6 +3,7 @@
 #include <chrono>
 #include <stdexcept>  
 #include <array>
+#include<iostream>
 
 FracturedMessage::FracturedMessage() 
     : rng(std::chrono::steady_clock::now().time_since_epoch().count()) {}
@@ -41,17 +42,35 @@ std::string FracturedMessage::reassemble() const {
     
     std::string result;
     for (const auto& fragment : sortedFragments) {
-        if (!verifyFragment(std::get<0>(fragment), std::get<1>(fragment), std::get<2>(fragment))) {
-            throw std::runtime_error("Fragment verification failed during reassembly");
+        int index = std::get<0>(fragment);
+        const std::string& fragmentData = std::get<1>(fragment);
+        uint32_t storedCRC = std::get<2>(fragment);
+        uint32_t calculatedCRC = calculateCRC32(fragmentData);
+        
+        std::cout << "Fragment " << index << " - Stored CRC: " << storedCRC 
+                  << ", Calculated CRC: " << calculatedCRC << std::endl;
+        
+        if (storedCRC != calculatedCRC) {
+            throw std::runtime_error("Fragment verification failed during reassembly for fragment " + std::to_string(index));
         }
-        result += std::get<1>(fragment);
+        result += fragmentData;
     }
     return result;
 }
 
+
 void FracturedMessage::addFragment(int index, const std::string& fragment, uint32_t crc) {
+    uint32_t calculatedCRC = calculateCRC32(fragment);
+    std::cout << "Adding fragment " << index << " - Provided CRC: " << crc 
+              << ", Calculated CRC: " << calculatedCRC << std::endl;
+    
+    if (crc != calculatedCRC) {
+        throw std::runtime_error("CRC mismatch when adding fragment " + std::to_string(index));
+    }
+    
     fragments.emplace_back(index, fragment, crc);
 }
+
 
 bool FracturedMessage::isComplete() const {
     if (fragments.empty()) {

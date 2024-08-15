@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src -isystem /opt/homebrew/include -isystem /opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12
+CXX_INCLUDES = -I/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src -isystem /opt/homebrew/opt/openssl@3/include -isystem /opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12
 
 CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
 

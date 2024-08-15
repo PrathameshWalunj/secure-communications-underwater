@@ -5,7 +5,11 @@
           "includePath": [
               "${workspaceFolder}/**",
               "/opt/homebrew/opt/openssl@3/include",
-              "/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12"
+              "/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/include/python3.12",
+              "/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Headers",
+              "usr/local/include",
+              "usr/local"
+
           ],
           "defines": [],
           "macFrameworkPath": [

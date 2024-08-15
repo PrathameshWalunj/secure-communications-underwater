@@ -23,15 +23,24 @@ void test_message_composer() {
     assert(message.find("This is a secure test message.") != string::npos);
     
     // Test message encryption and decryption
-    string encryptedMessage = composer.encryptMessage(message);
+    string recipient_public_key = composer.getPublicKey(); // Get the recipient's public key
+    string encryptedMessage = composer.encryptMessage(message, recipient_public_key); // Encrypt with recipient's public key
     assert(encryptedMessage != message);
     
-    string decryptedMessage = composer.decryptMessage(encryptedMessage);
+    // Split the encrypted message into encrypted key and ciphertext
+    size_t colonPos = encryptedMessage.find(':');
+    string encryptedKeyStr = encryptedMessage.substr(0, colonPos);
+    string ciphertextStr = encryptedMessage.substr(colonPos + 1);
+    
+    // Base64 decode the encrypted key
+    vector<unsigned char> encrypted_key = composer.base64Decode(encryptedKeyStr);
+    
+    // Decrypt the message
+    string decryptedMessage = composer.decryptMessage(ciphertextStr, encrypted_key);
     assert(decryptedMessage == message);
     
     cout << "MessageComposer tests passed." << endl;
 }
-
 void test_fractured_message() {
     FracturedMessage fm;
     string original = "This is a test message for fracturing and reassembly.";

@@ -139,10 +139,38 @@ CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/PythonIntegration.cpp -o CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.s
 
+CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o: CMakeFiles/SecureUnderwaterComm.dir/flags.make
+CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o: /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp
+CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o: CMakeFiles/SecureUnderwaterComm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o -MF CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o.d -o CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o -c /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp
+
+CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp > CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.i
+
+CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp -o CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.s
+
+CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o: CMakeFiles/SecureUnderwaterComm.dir/flags.make
+CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o: /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp
+CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o: CMakeFiles/SecureUnderwaterComm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o -MF CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o.d -o CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o -c /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp
+
+CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp > CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.i
+
+CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp -o CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.s
+
 CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o: CMakeFiles/SecureUnderwaterComm.dir/flags.make
 CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o: /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/main.cpp
 CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o: CMakeFiles/SecureUnderwaterComm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o -MF CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o.d -o CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o -c /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/main.cpp
 
 CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.i: cmake_force
@@ -160,6 +188,8 @@ SecureUnderwaterComm_OBJECTS = \
 "CMakeFiles/SecureUnderwaterComm.dir/src/CommunicationChannel.cpp.o" \
 "CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.o" \
 "CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.o" \
+"CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o" \
+"CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o" \
 "CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o"
 
 # External object files for target SecureUnderwaterComm
@@ -170,13 +200,15 @@ SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/src/FracturedMessage.c
 SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/src/CommunicationChannel.cpp.o
 SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/src/Submarine.cpp.o
 SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/src/PythonIntegration.cpp.o
+SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o
+SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o
 SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/src/main.cpp.o
 SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/build.make
-SecureUnderwaterComm: /opt/homebrew/lib/libssl.dylib
-SecureUnderwaterComm: /opt/homebrew/lib/libcrypto.dylib
+SecureUnderwaterComm: /opt/homebrew/opt/openssl@3/lib/libssl.dylib
+SecureUnderwaterComm: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 SecureUnderwaterComm: /opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/lib/libpython3.12.dylib
 SecureUnderwaterComm: CMakeFiles/SecureUnderwaterComm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable SecureUnderwaterComm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable SecureUnderwaterComm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SecureUnderwaterComm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

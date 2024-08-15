@@ -5,18 +5,29 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE Debug)
 
+set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/homebrew/opt/openssl@3 /opt/homebrew/opt/python@3.12)
+
+
 # Find OpenSSL
 find_package(OpenSSL REQUIRED)
 
-# Find Python 3.12
-set(Python3_ROOT_DIR "/opt/homebrew/opt/python@3.12")
-find_package(Python3 3.12 EXACT REQUIRED COMPONENTS Interpreter Development)
+# Find Python
+if(APPLE)
+    # On macOS, prefer Homebrew's Python if available
+    execute_process(
+        COMMAND brew --prefix python
+        OUTPUT_VARIABLE HOMEBREW_PYTHON_PREFIX
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+    if(HOMEBREW_PYTHON_PREFIX)
+        set(Python3_ROOT_DIR "${HOMEBREW_PYTHON_PREFIX}")
+    endif()
+endif()
+
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
 # Add OpenSSL and Python include directories
 include_directories(${OPENSSL_INCLUDE_DIR} ${Python3_INCLUDE_DIRS})
-
-# Add macOS-specific include directory
-include_directories("/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include")
 
 # Define source files
 set(SOURCES
@@ -25,11 +36,9 @@ set(SOURCES
     src/CommunicationChannel.cpp
     src/Submarine.cpp
     src/PythonIntegration.cpp
+    src/ZeroKnowledgeAuth.cpp
+    src/KeyExchange.cpp
 )
-
-# Copy Python script to build directory
-configure_file(${CMAKE_SOURCE_DIR}/scripts/adaptive_frequency_hopping.py
-               ${CMAKE_BINARY_DIR}/scripts/adaptive_frequency_hopping.py COPYONLY)
 
 # Create the main executable
 add_executable(SecureUnderwaterComm ${SOURCES} src/main.cpp)
@@ -56,6 +65,10 @@ target_link_libraries(RunTests
     Python3::Python
 )
 add_test(NAME RunTests COMMAND RunTests)
+
+# Copy Python script to build directory
+configure_file(${CMAKE_SOURCE_DIR}/scripts/adaptive_frequency_hopping.py
+               ${CMAKE_BINARY_DIR}/scripts/adaptive_frequency_hopping.py COPYONLY)
 
 # Set Python path for runtime
 set_target_properties(SecureUnderwaterComm PROPERTIES

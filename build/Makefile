@@ -206,6 +206,33 @@ src/FracturedMessage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/FracturedMessage.cpp.s
 .PHONY : src/FracturedMessage.cpp.s
 
+src/KeyExchange.o: src/KeyExchange.cpp.o
+.PHONY : src/KeyExchange.o
+
+# target to build an object file
+src/KeyExchange.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o
+.PHONY : src/KeyExchange.cpp.o
+
+src/KeyExchange.i: src/KeyExchange.cpp.i
+.PHONY : src/KeyExchange.i
+
+# target to preprocess a source file
+src/KeyExchange.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/KeyExchange.cpp.i
+.PHONY : src/KeyExchange.cpp.i
+
+src/KeyExchange.s: src/KeyExchange.cpp.s
+.PHONY : src/KeyExchange.s
+
+# target to generate assembly for a file
+src/KeyExchange.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/KeyExchange.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/KeyExchange.cpp.s
+.PHONY : src/KeyExchange.cpp.s
+
 src/MessageComposer.o: src/MessageComposer.cpp.o
 .PHONY : src/MessageComposer.o
 
@@ -287,6 +314,33 @@ src/Submarine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/Submarine.cpp.s
 .PHONY : src/Submarine.cpp.s
 
+src/ZeroKnowledgeAuth.o: src/ZeroKnowledgeAuth.cpp.o
+.PHONY : src/ZeroKnowledgeAuth.o
+
+# target to build an object file
+src/ZeroKnowledgeAuth.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o
+.PHONY : src/ZeroKnowledgeAuth.cpp.o
+
+src/ZeroKnowledgeAuth.i: src/ZeroKnowledgeAuth.cpp.i
+.PHONY : src/ZeroKnowledgeAuth.i
+
+# target to preprocess a source file
+src/ZeroKnowledgeAuth.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.i
+.PHONY : src/ZeroKnowledgeAuth.cpp.i
+
+src/ZeroKnowledgeAuth.s: src/ZeroKnowledgeAuth.cpp.s
+.PHONY : src/ZeroKnowledgeAuth.s
+
+# target to generate assembly for a file
+src/ZeroKnowledgeAuth.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecureUnderwaterComm.dir/build.make CMakeFiles/SecureUnderwaterComm.dir/src/ZeroKnowledgeAuth.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RunTests.dir/build.make CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.s
+.PHONY : src/ZeroKnowledgeAuth.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -352,6 +406,9 @@ help:
 	@echo "... src/FracturedMessage.o"
 	@echo "... src/FracturedMessage.i"
 	@echo "... src/FracturedMessage.s"
+	@echo "... src/KeyExchange.o"
+	@echo "... src/KeyExchange.i"
+	@echo "... src/KeyExchange.s"
 	@echo "... src/MessageComposer.o"
 	@echo "... src/MessageComposer.i"
 	@echo "... src/MessageComposer.s"
@@ -361,6 +418,9 @@ help:
 	@echo "... src/Submarine.o"
 	@echo "... src/Submarine.i"
 	@echo "... src/Submarine.s"
+	@echo "... src/ZeroKnowledgeAuth.o"
+	@echo "... src/ZeroKnowledgeAuth.i"
+	@echo "... src/ZeroKnowledgeAuth.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

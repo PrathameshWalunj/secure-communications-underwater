@@ -1,6 +1,7 @@
 #include "PythonIntegration.h"
 #include <stdexcept>
 #include <iostream>
+#include<filesystem>
 
 std::mutex PythonIntegration::pythonMutex;
 
@@ -17,6 +18,19 @@ void PythonIntegration::initializePython() {
     
     if (!Py_IsInitialized()) {
         Py_Initialize();
+    }
+    // Get the directory of the current executable
+    std::filesystem::path execPath = std::filesystem::current_path();
+    std::string scriptPath = (execPath.parent_path() / "scripts").string();
+    
+    // Add the scripts directory to Python's sys.path
+    PyRun_SimpleString("import sys");
+    PyRun_SimpleString(("sys.path.append('" + scriptPath + "')").c_str());
+    
+    pModule = PyImport_ImportModule("adaptive_frequency_hopping");
+    if (!pModule) {
+        PyErr_Print();
+        throw std::runtime_error("Failed to load adaptive_frequency_hopping module");
     }
     
     PyRun_SimpleString("import sys");

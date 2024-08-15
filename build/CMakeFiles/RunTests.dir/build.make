@@ -153,6 +153,34 @@ CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/PythonIntegration.cpp -o CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.s
 
+CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o: CMakeFiles/RunTests.dir/flags.make
+CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o: /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp
+CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o: CMakeFiles/RunTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o -MF CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o.d -o CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o -c /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp
+
+CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp > CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.i
+
+CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/ZeroKnowledgeAuth.cpp -o CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.s
+
+CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o: CMakeFiles/RunTests.dir/flags.make
+CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o: /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp
+CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o: CMakeFiles/RunTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o -MF CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o.d -o CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o -c /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp
+
+CMakeFiles/RunTests.dir/src/KeyExchange.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RunTests.dir/src/KeyExchange.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp > CMakeFiles/RunTests.dir/src/KeyExchange.cpp.i
+
+CMakeFiles/RunTests.dir/src/KeyExchange.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RunTests.dir/src/KeyExchange.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/src/KeyExchange.cpp -o CMakeFiles/RunTests.dir/src/KeyExchange.cpp.s
+
 # Object files for target RunTests
 RunTests_OBJECTS = \
 "CMakeFiles/RunTests.dir/tests/test.cpp.o" \
@@ -160,7 +188,9 @@ RunTests_OBJECTS = \
 "CMakeFiles/RunTests.dir/src/FracturedMessage.cpp.o" \
 "CMakeFiles/RunTests.dir/src/CommunicationChannel.cpp.o" \
 "CMakeFiles/RunTests.dir/src/Submarine.cpp.o" \
-"CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.o"
+"CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.o" \
+"CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o" \
+"CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o"
 
 # External object files for target RunTests
 RunTests_EXTERNAL_OBJECTS =
@@ -171,12 +201,14 @@ RunTests: CMakeFiles/RunTests.dir/src/FracturedMessage.cpp.o
 RunTests: CMakeFiles/RunTests.dir/src/CommunicationChannel.cpp.o
 RunTests: CMakeFiles/RunTests.dir/src/Submarine.cpp.o
 RunTests: CMakeFiles/RunTests.dir/src/PythonIntegration.cpp.o
+RunTests: CMakeFiles/RunTests.dir/src/ZeroKnowledgeAuth.cpp.o
+RunTests: CMakeFiles/RunTests.dir/src/KeyExchange.cpp.o
 RunTests: CMakeFiles/RunTests.dir/build.make
-RunTests: /opt/homebrew/lib/libssl.dylib
-RunTests: /opt/homebrew/lib/libcrypto.dylib
+RunTests: /opt/homebrew/opt/openssl@3/lib/libssl.dylib
+RunTests: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 RunTests: /opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/lib/libpython3.12.dylib
 RunTests: CMakeFiles/RunTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable RunTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prathameshwalunj/Desktop/SubmarineCryProject/secure-communications-underwater/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable RunTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RunTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
